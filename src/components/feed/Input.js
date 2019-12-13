@@ -1,9 +1,9 @@
 import React from "react"
 
 // import TimeStamp from "./InputComponents/Timestamp.js"
-import TextArea from "./InputComponents/Textarea.js"
-import NameInput from "./InputComponents/NameInput.js"
-import InputButton from "./InputComponents/InputButton.js"
+import TextArea from "./inputcomponents/Textarea.js"
+import NameInput from "./inputcomponents/NameInput.js"
+import InputButton from "./inputcomponents/InputButton.js"
 
 
 
