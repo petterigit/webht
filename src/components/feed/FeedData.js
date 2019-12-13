@@ -1,22 +1,22 @@
 const feedData = [
   {
     id: 1,
-    timestamp: "Sunday",
+    user: "Pasi",
     text: "praise the lord"
   },
   {
     id: 2,
-    timestamp: "sad day",
+    user: "Pasi-Antti",
     text: "Boomers wouldn't get this LOL"
   },
   {
     id: 3,
-    timestamp: "good day",
+    user: "Antti-Pasi",
     text: "Good Day, get it"
   },
   {
     id: 4,
-    timestamp: "midday",
+    user: "Antti",
     text: "Mid-Day, get it"
   },
 ]

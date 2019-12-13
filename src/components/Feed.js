@@ -10,17 +10,25 @@ class Feed extends React.Component {
     super()
     this.state = {
       newData: {},
-      feedList: feedData
+      feedList: feedData,
+      id: 5
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
     console.log("Update data");
+    console.log(e.target);
+    //console.log(e.target.querySelector("#textArea").value);
+    //console.log(e.target.querySelector("#nameInput").value);
+
+    let textInput = e.target.querySelector("#textArea").value;
+    let nameInput = e.target.querySelector("#nameInput").value;
+
     const paramData = {
-      text: e.target.firstChild.value,
-      id: -1,
-      timestamp: "default"
+      text: textInput,
+      id: this.state.id,
+      user: nameInput
     }
 
     e.preventDefault();
@@ -31,13 +39,14 @@ class Feed extends React.Component {
 
       return {
         feedList,
-        newData: {}
+        newData: {},
+        id: prevState.id + 1
       }
     })
     }
 
   render() {
-    const feedList = this.state.feedList.map(data => <FeedItem key={data.id} date={data.timestamp} text={data.text} />)
+    const feedList = this.state.feedList.map(data => <FeedItem key={data.id} user={data.user} text={data.text} />)
 
     return (
       <div className="Feed">
