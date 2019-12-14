@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.1",
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
     "node-env-run": "^3.0.2",
@@ -18,12 +19,13 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts start",
+    "start": "concurrently \"cd backend && node server.js\" \"PORT=8080 react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon index.js"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -41,5 +43,18 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petterigit/webht.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petterigit/webht/issues"
+  },
+  "homepage": "https://github.com/petterigit/webht#readme"
 }
